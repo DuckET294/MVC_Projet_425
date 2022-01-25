@@ -2,6 +2,7 @@ package com.company;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.WindowEvent;
 import java.util.ArrayList;
 
 
@@ -9,11 +10,8 @@ public class OuvrierController {
 
     private Ouvrier ouvrier;
     private OuvrierView ouvrierVu;
-    private final ArrayList<Ouvrier> liste = new ArrayList<>();
+    private JavaSwing javaSwing;
 
-    public OuvrierController() {
-
-    }
 
     public OuvrierController(Ouvrier ouvrier, OuvrierView ouvrierVu) {
         this.ouvrier = ouvrier;
@@ -66,20 +64,8 @@ public class OuvrierController {
 
         ouvrierVu.afficherOuvrier(ouvrier.getListeOuvrier());
 
-
     }
 
-    void updateJlistView(JFrame frame) {
 
-        JList<Ouvrier> displayList = new JList(ouvrier.getListeOuvrier().toArray(new Ouvrier[0]));
-
-        frame.setPreferredSize(new Dimension(800, 800));
-        frame.add(displayList);
-        SwingUtilities.updateComponentTreeUI(displayList);
-        frame.pack();
-        frame.setVisible(true);
-        frame.setLayout(null);
-
-    }
 
 }

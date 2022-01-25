@@ -9,28 +9,19 @@ public class Ouvrier {
 
     private int numOuvrier;
     private String prenom;
-
-    @Override
-    public String toString() {
-        return "Numéro identification =" + numOuvrier +
-                ", prenom='" + prenom + '\'' +
-                ", nom='" + nom + '\'' +
-                ", titreEmploie='" + titreEmploie + '\'' +
-                ", salaireAnnuel=" + salaireAnnuel;
-    }
-
     private String nom;
     private String titreEmploie;
     private double salaireAnnuel;
-    private Ouvrier ouvrier;
-    private ArrayList <Ouvrier> listeOuvrier = new ArrayList<>();
 
-    public Ouvrier(){
+
+    private final ArrayList<Ouvrier> listeOuvrier = new ArrayList<>();
+
+    public Ouvrier() {
 
 
     }
 
-    public Ouvrier(int numOuvrier, String prenom, String nom, String titreEmploie,  double salaireAnnuel){
+    public Ouvrier(int numOuvrier, String prenom, String nom, String titreEmploie, double salaireAnnuel) {
         super();
         this.numOuvrier = numOuvrier;
         this.prenom = prenom;
@@ -84,12 +75,20 @@ public class Ouvrier {
         this.salaireAnnuel = salaireAnnuel;
     }
 
-    public void setOuvriers(Ouvrier ouvrier){
+    public void setOuvriers(Ouvrier ouvrier) {
 
         this.listeOuvrier.add(ouvrier);
 
     }
 
+    @Override
+    public String toString() {
+        return "Numéro Identification: " + numOuvrier +
+                "  Prenom: " + prenom +
+                "  Nom: " + nom +
+                "  Emploie: " + titreEmploie  +
+                "  Salaire Annuel: " + salaireAnnuel;
+    }
 
 
 }

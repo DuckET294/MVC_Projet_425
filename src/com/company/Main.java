@@ -1,6 +1,5 @@
 package com.company;
 
-import javax.swing.*;
 import java.util.*;
 
 
@@ -8,9 +7,9 @@ public class Main {
 
 
     public static void main(String[] args) {
-        JFrame frame = new JFrame();
         Scanner entrer = new Scanner(System.in);
         Ouvrier ouvrier = new Ouvrier();
+        JavaSwing javaSwing = new JavaSwing();
         OuvrierView ouvrierView = new OuvrierView();
         OuvrierController ouvrierController = new OuvrierController(ouvrier, ouvrierView);
         int clavier = 0;
@@ -30,8 +29,7 @@ public class Main {
                 case 1:
 
                     ouvrierController.updateView();
-                    ouvrierController.updateJlistView(frame);
-
+                    javaSwing.initializeJlistView(ouvrier.getListeOuvrier());
                     break;
                 case 2:
 
@@ -41,11 +39,10 @@ public class Main {
 
                 case 3:
 
-
-
+                    javaSwing.closeJFrame();
                     ouvrier.setOuvriers(creerOuvrier(entrer));
                     ouvrierController.updateView();
-
+                    javaSwing.initializeJlistView(ouvrier.getListeOuvrier());
 
                     break;
 
@@ -74,6 +71,8 @@ public class Main {
 
         return new Ouvrier(numEmploye,prenom,nom,titreEmploi,salaire);
     }
+
+
 
 
 }

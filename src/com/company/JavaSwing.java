@@ -4,7 +4,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
 
-public class JavaSwing{
+
+public class JavaSwing {
 
 
     JFrame frame = new JFrame();
@@ -14,14 +15,14 @@ public class JavaSwing{
 
     }
 
-     void initializeJlistView(ArrayList<Ouvrier> listeOuvrier) {
+    void initializeJlistView(ArrayList<Ouvrier> listeOuvrier) {
 
         frame = new JFrame();
         ArrayList<Ouvrier> liste = listeOuvrier;
         JList<Ouvrier> displayList = new JList(liste.toArray(new Ouvrier[100]));
         displayList.setBackground(Color.LIGHT_GRAY);
         displayList.setFont(new Font("Arial",Font.BOLD,16));
-        displayList.setForeground(Color.BLUE);
+        displayList.setForeground(Color.BLACK);
         jTable = new JScrollPane(displayList);
         frame.setPreferredSize(new Dimension(1000, 800));
         frame.add(new JScrollPane(jTable), BorderLayout.CENTER);
@@ -32,13 +33,9 @@ public class JavaSwing{
 
     }
 
-
-    void closeJFrame(){
+    void closeJFrame() {
 
         frame.dispose();
-
     }
-
-
 
 }

@@ -13,6 +13,7 @@ public class Main {
         OuvrierView ouvrierView = new OuvrierView();
         OuvrierController ouvrierController = new OuvrierController(ouvrier, ouvrierView);
         int clavier = 0;
+        int id;
 
 
         while (clavier != 9) {
@@ -31,21 +32,29 @@ public class Main {
                     ouvrierController.updateView();
                     javaSwing.initializeJlistView(ouvrier.getListeOuvrier());
                     break;
+
                 case 2:
 
-
+                    System.out.println(listeSize());
 
                     break;
 
+
                 case 3:
+                    javaSwing.closeJFrame();
+                    ouvrierController.ajoutOuvrier(creerOuvrier(entrer));
+                    ouvrierController.updateView();
+                    javaSwing.initializeJlistView(ouvrier.getListeOuvrier());
+                    break;
+
+                case 4:
 
                     javaSwing.closeJFrame();
-                    ouvrier.setOuvriers(creerOuvrier(entrer));
+                    ouvrierController.effacerOuvrier(retirerOuvrier(entrer));
                     ouvrierController.updateView();
                     javaSwing.initializeJlistView(ouvrier.getListeOuvrier());
 
                     break;
-
 
                 default:
                     break;
@@ -56,10 +65,19 @@ public class Main {
 
     }
 
+    private static int listeSize() {
+
+        Ouvrier ouvrier = new Ouvrier();
+
+      int size =  ouvrier.getListeOuvrier().size();
+
+        return size;
+    }
+
+
     private static Ouvrier creerOuvrier(Scanner entrer) {
 
-        System.out.println("Entrer un numéro d'identification");
-        int numEmploye = entrer.nextInt();
+
         System.out.println("Entrer un prénom");
         String prenom = entrer.next();
         System.out.println("Entrer un nom");
@@ -67,12 +85,25 @@ public class Main {
         System.out.println("Entrer un métier");
         String titreEmploi = entrer.next();
         System.out.println("Entrer le salaire");
-        double salaire = entrer.nextDouble();
+        float salaire = entrer.nextFloat();
 
-        return new Ouvrier(numEmploye,prenom,nom,titreEmploi,salaire);
+       Ouvrier ouvrier = new Ouvrier( prenom, nom, titreEmploi, salaire);
+
+        return ouvrier;
+
+
     }
 
+    private static int retirerOuvrier(Scanner entrer) {
 
+        System.out.println("Entrer le numéro d'identification");
+
+        int numOuvrier = entrer.nextInt();
+
+        return numOuvrier;
+
+
+    }
 
 
 }

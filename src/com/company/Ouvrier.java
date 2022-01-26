@@ -1,29 +1,21 @@
 package com.company;
 
 
-import javax.swing.*;
 import java.util.*;
 
 public class Ouvrier {
 
 
-    private int numOuvrier;
+
     private String prenom;
     private String nom;
     private String titreEmploie;
-    private double salaireAnnuel;
-
+    private float salaireAnnuel;
 
     private final ArrayList<Ouvrier> listeOuvrier = new ArrayList<>();
 
-    public Ouvrier() {
 
-
-    }
-
-    public Ouvrier(int numOuvrier, String prenom, String nom, String titreEmploie, double salaireAnnuel) {
-        super();
-        this.numOuvrier = numOuvrier;
+    public Ouvrier(String prenom, String nom, String titreEmploie, float salaireAnnuel) {
         this.prenom = prenom;
         this.nom = nom;
         this.titreEmploie = titreEmploie;
@@ -31,17 +23,8 @@ public class Ouvrier {
 
     }
 
-    public ArrayList<Ouvrier> getListeOuvrier() {
-        return listeOuvrier;
-    }
+    public Ouvrier(){}
 
-    public int getNumOuvrier() {
-        return numOuvrier;
-    }
-
-    public void setNumOuvrier(int numOuvrier) {
-        this.numOuvrier = numOuvrier;
-    }
 
     public String getPrenom() {
         return prenom;
@@ -71,24 +54,22 @@ public class Ouvrier {
         return salaireAnnuel;
     }
 
-    public void setSalaireAnnuel(double salaireAnnuel) {
+    public void setSalaireAnnuel(float salaireAnnuel) {
         this.salaireAnnuel = salaireAnnuel;
     }
 
-    public void setOuvriers(Ouvrier ouvrier) {
-
-        this.listeOuvrier.add(ouvrier);
-
+    public ArrayList<Ouvrier> getListeOuvrier() {
+        return listeOuvrier;
     }
+
+
 
     @Override
     public String toString() {
-        return "Numéro Identification: " + numOuvrier +
-                "  Prenom: " + prenom +
-                "  Nom: " + nom +
-                "  Emploie: " + titreEmploie  +
-                "  Salaire Annuel: " + salaireAnnuel;
+        return
+                " Prénom :" +  " "  + prenom + " " +
+                " Nom :" + nom + " " +
+                " Emploie :" + titreEmploie + " " +
+                " Salaire :" + salaireAnnuel;
     }
-
-
 }

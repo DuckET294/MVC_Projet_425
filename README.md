@@ -85,5 +85,5 @@ avec le nom, le prénom, l'emploi et le salaire de chaque employés.
 Each option will act on the list and everything will be displayed on the screen in a window (JFrame)
 with the first name, lastname name, occupation and salary of each employee.
 
-
+<a name="license"></a>
 #License

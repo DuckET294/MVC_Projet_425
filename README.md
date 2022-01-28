@@ -20,15 +20,16 @@ Projet MVC/Iterator Pattern Design
     * [English](#sub-heading2)
 
 - [License](#heading-8)
-    
-    
 
+<a name="heading"></a>
 # Introduction
+
 French:
 Ceci est un projet sur un pattern MVC et Iterator dans un but d'apprentissage.
 
 English:
 This is a project on an MVC and Iterator pattern for learning purposes
+
 
 # Technologies
 

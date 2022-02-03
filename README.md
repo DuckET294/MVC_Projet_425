@@ -75,12 +75,12 @@ avec le nom, le prénom, l'emploi et le salaire de chaque employés.
 * ## English:
   After the program is started, a menu of six options will appear. The user
   will have to choose an option:
-    * 1 Add Worker / Create
-    * 2 Show Workers / Read
-    * 3 Update worker information / Update
-    * 4 Remove a Worker / Delete
-    * 5 Close screen GUI
-    * 6 Quit application
+  * 1 Add Worker / Create
+  * 2 Show Workers / Read
+  * 3 Update worker information / Update
+  * 4 Remove a Worker / Delete
+  * 5 Close screen GUI
+  * 6 Quit application
 
 Each option will act on the list and everything will be displayed on the screen in a window (JFrame)
 with the first name, lastname name, occupation and salary of each employee.
